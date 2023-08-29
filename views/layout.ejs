@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title><%= typeof pageTitle !== 'undefined' ? pageTitle : 'Ryans Hostels' %></title>
+
+  <script type="module" src="/dist/ryans-components/ryans-components.esm.js"></script>
+  <script nomodule src="/dist/ryans-components/ryans-components.js"></script>
+</head>
+
+<body data-barba="wrapper">
+  <%- include('components/header') %>
+
+  <main data-barba="container" data-barba-namespace="<%= routeName %>">
+    <%- body %>
+  </main>
+
+  <input id="message" type="text" placeholder="Type your name" maxlength="12">
+  <button id="btn">OK</button>
+
+  <ryans-cursors></ryans-cursors>
+
+  <script type="module" src="/dist/index.js"></script>
+  <script nomodule src="/dist/index.cjs.js"></script>
+</body>
+</html>

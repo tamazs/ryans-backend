@@ -1,0 +1,14 @@
+.user-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 3px;
+  background-color: black;
+  pointer-events: none;
+}
+
+#mycursor {
+  margin: 10px;
+  background: none;
+}
